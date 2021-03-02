@@ -1,0 +1,53 @@
+<div class="container" style="padding-top: 10px;">
+    <h1>Nuevo usuario</h1>
+
+    <div class="row" *ngIf="alertaSuccess">
+        <div class="col-md-8">
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                <strong>Usuario creado con exito</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        
+        </div>
+    </div>
+
+    <div class="row" *ngIf="alertaError">
+        <div class="col-md-8">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Datos incompletos</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <label for="">Nombre</label>
+            <input type="text" class="form-control" [(ngModel)]="usuario.nombre">
+        </div>
+
+        <div class="col-md-4">
+            <label for="">Apellido</label>
+            <input type="text" class="form-control" [(ngModel)]="usuario.apellido">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label for="">Correo</label>
+            <input type="text" class="form-control" [(ngModel)]="usuario.correo">
+        </div>
+
+        <div class="col-md-4">
+            <label for="">Telefono</label>
+            <input type="text" class="form-control" [(ngModel)]="usuario.telefono">
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click) ="crearUsuario()">Guardar</button>
+</div>

@@ -5,18 +5,18 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
 import {HttpClientModule} from '@angular/common/http';
-import { DetalleComponent } from './detalle/detalle.component';
+
 
 import { AppRoutingModule } from './app-routing.module';
-import { ClienteComponent } from './cliente/cliente.component';
+
+import { UsuarioComponent } from './usuario/usuario.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DetalleComponent,
-    ClienteComponent,
+    UsuarioComponent,
   ],
   imports: [
     BrowserModule,
